@@ -14,18 +14,18 @@
     //   { id: -2, description: 'second todo', done: false },
     //   { id: -1, description: 'third todo', done: false },
     // ];
-    if(!localStorage.getItem('state')){
-      state = [
+    if(typeof localStorage.getItem('state') == 'undefined' || localStorage.getItem('state') == null){
+      var state = [
           { id: -3, description: 'first todo', done: false },
           { id: -2, description: 'second todo', done: false },
           { id: -1, description: 'third todo', done: false },
         ];
+    } else {
+      var newState = localStorage.getItem('state');
+      var parsedNewState = JSON.parse(newState);
+      var state = parsedNewState;
     }
-    var newState = localStorage.getItem('state');
-    var newNewState = JSON.parse(newState);
-
-    var state = newNewState;
-    console.log('updated3');
+    console.log('updated4');
 
      // this is our initial todoList
 

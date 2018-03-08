@@ -25,7 +25,7 @@
     var newNewState = JSON.parse(newState);
 
     var state = newNewState;
-    console.log('updated2');
+    console.log('updated3');
 
      // this is our initial todoList
 

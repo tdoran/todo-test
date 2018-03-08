@@ -9,13 +9,11 @@
     var sortDescend = document.getElementById('button-descend');
     var sortAZ = document.getElementById('button-az');
 
-    var myState = [
-      { id: -3, description: 'first todo', done: false },
-      { id: -2, description: 'second todo', done: false },
-      { id: -1, description: 'third todo', done: false },
-    ];
-
-    localStorage.setItem('state', JSON.stringify(myState));
+    // var myState = [
+    //   { id: -3, description: 'first todo', done: false },
+    //   { id: -2, description: 'second todo', done: false },
+    //   { id: -1, description: 'third todo', done: false },
+    // ];
     var newState = localStorage.getItem('state');
     var newNewState = JSON.parse(newState);
 
@@ -124,14 +122,14 @@
 
     // LOCAL STORAGE ATTEMPT
     localStorage.setItem('state', JSON.stringify(state));
-    var myState = localStorage.getItem('state');
+    myState = localStorage.getItem('state');
     console.log('myState: ', JSON.parse(myState));
 
     // you should not need to change this function
     var update = function(newState) {
       state = newState;
       localStorage.setItem('state', JSON.stringify(state));
-      var myState = localStorage.getItem('state');
+      myState = localStorage.getItem('state');
       console.log('myState: ', JSON.parse(myState));
       renderState(state);
     };

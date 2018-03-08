@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>tdd todo</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <div class="maincontainer">
+      <div class="formcontainer">
+        <form class="input-form" id="add-todo">
+          <span id="validateSpan"> Please fill in this field </span>          
+          <input class="input-form__text" type="text" name="description" value="" autocomplete="off">
+          <input class="input-form__button" type="submit" name="" value="Add">
+          <input class="input-form__button" id="button-descend" type="submit" name="" value="Descend">
+          <input class="input-form__button" id="button-az" type="submit" name="" value="A-Z">
+        </form>
+      </div>
+      <div class="container">
+        <div id = "todo-container">
+            <ul class="todos-list">
+            </ul>
+        </div>
+      </div>
+    </div>
+
+  </body>
+  <script type="text/javascript" src = "./logic.js"></script>
+  <script type="text/javascript" src = "./dom.js"></script>
+</html>
